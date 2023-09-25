@@ -47,7 +47,7 @@ into the {body} of the default.hbs template --}}
   {{!-- Inject styles of the hero image to make it responsive --}}
   {{> hero background=@site.cover_image}}
   <div class="m-hero__content" data-aos="fade-down">
-    <img class="w-128" src="{{asset 'images/OSUT_alb.svg'}}">
+    {{!-- <img class="w-128" src="{{asset 'images/OSUT_alb.svg'}}"> --}}
 
     {{#if @custom.use_custom_cta}}
       <a href="{{@site.url}}/#/portal/signup" class="m-button filled">{{@custom.custom_cta_text}}</a>
