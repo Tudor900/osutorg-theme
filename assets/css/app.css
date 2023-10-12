@@ -2034,13 +2034,13 @@ _:-ms-fullscreen {
     width: 100%;
     /* height: 100%; */
     z-index: 1;
-    opacity: .7
+    opacity: .7;
 }
 
 @media (max-width: 480px){
     .m-hero__picture{
         width : 200%;
-        height: 200%;
+        height: 100%;
         top: auto;
         left: auto;
     }
