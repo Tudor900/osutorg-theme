@@ -10,6 +10,17 @@ It can be used also as the home page or the default page.
   <link rel="preload" href="{{asset "js/home.js"}}" as="script" />
 {{/contentFor}}
 
+
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "faaaa110-fd8c-4987-bb07-4610fec63c80",
+    });
+  });
+</script>
+
 {{!-- This block loads specific styles for the index page --}}
 {{#contentFor "styles"}}
   <script src="https://cdn.tailwindcss.com"></script>
@@ -52,7 +63,7 @@ into the {body} of the default.hbs template --}}
       <a href="{{@site.url}}/#/portal/signup" class="m-button filled">{{@custom.custom_cta_text}}</a>
     {{else}}
       {{#if @site.members_enabled}}
-        <a href="https://forms.gle/2z5ikZHwWmPuAKrN6" class="m-button filled js-newslette">Let's run!</a>
+        <div class='onesignal-customlink-container'></div>
       {{/if}}
     {{/if}}
   </div>
